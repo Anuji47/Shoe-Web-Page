@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+	<script src="../w1838831/js/jQueryA.js"></script>
+	<link rel="stylesheet" href="../w1838831/css/extr.css">
+	<title>Search 2</title>
+</head>
+
+<body>
+	<!---------------------------------Navigation Bar--------------------------------->
+	<div>
+		<section class="nav-bar">
+			<nav>
+				<div>
+					<ul class="dis">
+						<li class="home"><a href="index.html">Home 🏠</a></li>
+						<li class="shopping"><a href="shop.html">Shop 🛒</a></li>
+						<li class="sea"><a href="extra.html">Search 🔍</a></li>
+					</ul>
+				</div>
+			</nav>
+		</section>
+	</div>
+	<!-------------------------------------------------------------------------------->
+	<!---------------------------------Search with values for the json format----------------------------------------------->
+	<div class="form">
+		<h1 class="topic">DesShoes</h1>
+		<br>
+		<br>
+		<h2>Gender :</h2>
+		<select name="gender" id="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="universal">Universal</option>
+		</select>
+		<br>
+		<br>
+		<h2>Style :</h2>
+		<select name="style" id="style">
+			<option value="flat">Flats</option>
+			<option value="running">Running</option>
+			<option value="boots">Boots</option>
+		</select>
+		<br>
+		<br>
+		<p class="box">
+			<h2>Price Range :</h2>
+			<input type="text" id="amount" readonly class="goldSliderText">
+			<br>
+			<div id="slider-range"></div>
+			<br>
+			<div class="inline">
+				<h2>Size:</h2>
+				<input id="spinner" value="4"> </div>
+			<br>
+			<br>
+			<h2>Colour :</h2>
+			<select name="colour" id="colour">
+				<option value="black">Black</option>
+				<option value="white">White</option>
+				<option value="brown">Brown</option>
+				<option value="red">Red</option>
+			</select>
+			<div class="but">
+				<button id="Search">Search</button>
+				<div id="Placeholder"></div>
+				<br>
+				<button id="viewFavourites">View Favourites</button>
+				<button id="clearFavourites">Clear Favourites</button>
+				<div id="Placeholder2"></div>
+			</div>
+			<!----------------------------------------------------------------------------------->
+			<!------------------------------------Json format for the shoes----------------------------------------------->
+			<script>
+			var data = {
+				"shoes": [{
+					"id": "shoe1",
+					"name": "Pure Tone",
+					"gender": "female",
+					"size": [7, 8, 9, 10],
+					"price": 75,
+					"picture": "img/shoe1.jpg",
+					"colour": "black",
+					"url": "shoe1.html",
+					"style": "flat",
+					"description": "These chic snake print shoes are crafted from a combination of soft leather and nubuck.For ultimate versatility, they feature a heel piece that folds down - allowing them to be worn as slip-ons or mules. The simple yet sophisticated upper is teamed with a low 2cm heel and rubber outsole to help with grip, while a leather lining and sock work together with our dual density Cushion Plus™ technology to provide comfort in every step.",
+				}, {
+					"id": "shoe2",
+					"name": "Orinoco 2 Lace",
+					"gender": "female",
+					"size": [8, 9, 10, 12],
+					"price": 90,
+					"picture": "img/shoe2.jpg",
+					"colour": "brown",
+					"url": "shoe2.html",
+					"description": "Refreshing our bestselling Orinoco profile, a lace-up ankle boot that stays all day wearable. The premium dark olive leather upper stays classic and crafted while the cleated sole with 3cm heel feels durable and adds grip. Perfect to step into the season with casual style.",
+					"style": "boots"
+				}, {
+					"id": "shoe3",
+					"name": "Puxton Run",
+					"gender": "universal",
+					"size": [4, 5, 6, 8],
+					"price": 69,
+					"picture": "img/shoe3.jpg",
+					"colour": "black",
+					"url": "shoe3.html",
+					"description": "Made for supreme comfort on the move, Puxton Run combines stylish athletic design with supportive Clarks technologies. Its premium black suede and nubuck upper and removable moulded footbed provide unbeatable softness and cushioning while a soft padded collar protects the ankle. Helping feet to stay cool, Active Air™ technology circulates air around the shoe, enhanced by a breezy leather sock.",
+					"style": "running"
+				}, {
+					"id": "shoe4",
+					"name": "Caravan",
+					"gender": "male",
+					"size": [6, 7, 8, 11],
+					"price": 75,
+					"picture": "img/shoe4.jpg",
+					"colour": "black",
+					"url": "shoe4.html",
+					"description": "Its characteristic heavy Forest Stewardship Council®-certified rubber crepe sole and tapestry textile upper have a vintage aesthetic while the moccasin construction and black Stead’s suede give a comfortable, classic feel. From city streets to country strolls, the Caravan is at home everywhere.",
+					"style": "boots"
+				}, {
+					"id": "shoe5",
+					"name": "Clarkdale Hall",
+					"gender": "male",
+					"size": [9, 10, 11, 12],
+					"price": 89,
+					"picture": "img/shoe5.jpg",
+					"colour": "brown",
+					"url": "shoe5.html",
+					"description": "A celebration of traditional Clarks shoemaking, Clarkdale Hall is a classic Chelsea boot in premium cognac suede, complete with a comfortable padded topline. A handy ankle loop makes it quick and easy to get this boot on and off, and the heel and layered sole are finished with crafted detail. Boosting every step, the Cushion Plus™ footbed delivers targeted all-day comfort.",
+					"style": "boots"
+				}, {
+					"id": "shoe6",
+					"name": "Pure 2 Tassel",
+					"gender": "female",
+					"size": [4, 5, 6, 7],
+					"price": 85,
+					"picture": "img/shoe6.jpg",
+					"colour": "red",
+					"url": "shoe6.html",
+					"description": "Chic and effortless, it’s all in the detail for classic casual shoe Pure 2 Tassel. A contemporary buckle, playful tassel, and wine leather finish team with breathable leather linings and a cushioned footbed to deliver subtle sophistication and comfort in every step.",
+					"style": "flat"
+				}, {
+					"id": "shoe7",
+					"name": "CourtLite Lace",
+					"gender": "universal",
+					"size": [8, 10, 11, 12],
+					"price": 70,
+					"picture": "img/shoe7.jpg",
+					"colour": "white",
+					"url": "shoe7.html",
+					"description": "A minimal, subtly retro sneaker stacked with ultimate comfort features, Court Lite Lace complements life on-the-move. Game-changing Mi-X technology combines an airy part-recycled EVA midsole with a removable, breathable footbed for supreme underfoot cushioning and added bounce. Boosting its planet-friendly credentials, this trainer is finished with responsibly sourced white leather, a part-recycled rubber sole and laces that utilise recycled polyester.",
+					"style": "running"
+				}]
+			}
+			</script>
+			<!---------------------------------------------------------------------->
+	</div>
+</body>
+
+</html>

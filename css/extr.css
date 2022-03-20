@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200&family=Fredericka+the+Great&family=Open+Sans:ital,wght@1,500&family=Pushster&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+ }
+
+ body{
+    background-image: url('../img/Nike-Free-Hyperfeel-on-display_hd_1600.jpg');
+ }
+
+
+ ul{
+	display: flex;
+	width: 100%;
+	height: 7vh;
+	margin: auto;
+	list-style: none;
+	justify-content: space-between;
+	text-align: center;
+    background-color: #262626;
+}
+
+li {
+	padding: 1rem 2rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+
+	min-width: 80px;
+	margin: auto;
+}
+
+.home{
+  color: white;
+  text-decoration: none;
+}
+
+.sea{
+  color: white;
+}
+
+.home a:hover{
+  color: #E3BE19;
+}
+
+
+.sea a:hover{
+  color: #FF5403;
+}
+
+.shopping a:hover{
+  color: #EC9615;
+}
+
+.dis{
+  font-size: 20px;
+}
+
+
+li:active {
+  transform: translateY(4px);
+}
+
+.topic{
+    font-family: 'Pushster', cursive;
+    margin-left: 635px;
+    position: absolute;
+    font-size: 4em;
+    margin-top: -65px;
+    background-image: linear-gradient(to left,  #E3BE19, #FF5403);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+.form{
+    text-align: center;
+    margin-top: 90px;  
+    color: white;
+    font-size: 1.1em;
+    
+}
+
+
+#slider-range{
+    width: 30%;
+    margin-left: 535px;
+    background-image: linear-gradient(to left,  #E3BE19, #FF5403); 
+}
+
+#Search{
+    font-size: 1.6em; 
+    margin-top: 35px; 
+    transition: all 4s;
+    cursor: pointer;
+    background-image: linear-gradient(to left,  #E3BE19, #FF5403);
+    border-radius: 10px;
+}
+
+#Search:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-image: linear-gradient(to left,  #FF5403, #E3BE19);
+}
+
+.type{
+    margin-top: 100px;
+    font-size: 20px;
+    border: 2px solid white;
+    width: 550px;
+    margin-left: 500px;
+}
+
+.visit{
+    background-image: linear-gradient(to left,  #FF5403, #E3BE19);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.visit:hover{
+    background-image: linear-gradient(to left,  #E3BE19, #FF5403);
+}
+
+#viewFavourites{
+    background-image: linear-gradient(to left,  #FF5403, #E3BE19);
+}
+
+#viewFavourites:hover{
+    background-image: linear-gradient(to left,  #E3BE19, #FF5403);
+}
+
+#clearFavourites{
+    background-image: linear-gradient(to left,  #FF5403, #E3BE19);
+}
+
+#clearFavourites:hover{
+  background-image: linear-gradient(to left,  #E3BE19, #FF5403);
+}
+
+
+
+
+
